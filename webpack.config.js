@@ -47,7 +47,8 @@ const config = {
       template: path.join(PATHS.app, 'index.html')
     }),
     new CopyWebpackPlugin([
-      { from: path.join(PATHS.app, 'img'), to: path.join(PATHS.dist, 'img') }
+      { from: path.join(PATHS.app, 'img'), to: path.join(PATHS.dist, 'img') },
+      { from: path.join(PATHS.app, 'js'), to: path.join(PATHS.dist, 'js') }
     ])
   ],
   sassLoader: {

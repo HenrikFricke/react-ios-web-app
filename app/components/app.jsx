@@ -1,8 +1,13 @@
 import React from 'react';
-import AppBar from 'react-toolbox/lib/app_bar';
+import AppBar from './appBar.jsx';
+import ToDoList from './toDoList.jsx';
 
 const App = () => (
-  <AppBar title="React iOS Web App" />
+  <div>
+    <AppBar />
+    <ToDoList />
+  </div>
+
 );
 
 export default App;

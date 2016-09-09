@@ -1,0 +1,10 @@
+.toDoList {
+  margin-top: 100px;
+}
+
+.listItem {
+  > span {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+}
