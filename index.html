@@ -26,5 +26,9 @@
 </head>
 <body>
   <div id="app"></div>
+  <script>
+    document.ontouchmove = function(e) {e.preventDefault()};
+    document.getElementById('app').ontouchmove = function(e) {e.stopPropagation()};
+  </script>
 <script type="text/javascript" src="react-ios-web-app.js"></script></body>
 </html>
