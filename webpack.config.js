@@ -4,6 +4,7 @@ const webpack = require('webpack')
 const path = require('path')
 const autoprefixer = require('autoprefixer')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const env = process.env.NODE_ENV
 
@@ -44,7 +45,10 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(PATHS.app, 'index.html')
-    })
+    }),
+    new CopyWebpackPlugin([
+      { from: path.join(PATHS.app, 'img'), to: path.join(PATHS.dist, 'img') }
+    ])
   ],
   sassLoader: {
     data: '@import "theme/_config.scss";',
