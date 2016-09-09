@@ -13,14 +13,6 @@
     }
     body {
       margin: 0;
-      overflow: hidden;
-    }
-    #app {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      overflow-y: scroll;
-      -webkit-overflow-scrolling: touch;
     }
   </style>
 </head>
@@ -28,7 +20,6 @@
   <div id="app"></div>
   <script>
     document.ontouchmove = function(e) {e.preventDefault()};
-    document.getElementById('app').ontouchmove = function(e) {e.stopPropagation()};
   </script>
 <script type="text/javascript" src="react-ios-web-app.js"></script></body>
 </html>
